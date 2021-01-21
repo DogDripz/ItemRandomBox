@@ -1,0 +1,10 @@
+main: com.ItemBox.Main.Main
+autor: Clara
+version: 1.0
+name: ItemBox
+description: is King
+commands:
+  inv:
+    description: 커스텀 인벤토리 테스트
+    usage: /inv
+        
