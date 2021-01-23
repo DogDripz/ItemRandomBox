@@ -77,6 +77,6 @@ public void onPlayerBoxing(PlayerInteractEvent a)
 			e.setCancelled(true);
 		}
 	}
-}	    
+}	   
 	
 
