@@ -3,7 +3,7 @@ ItemRandomBox
 > # 해야할 일
 > > 1. ~~.gitignore 설정~~
 > > 2. ~~gradle 설정~~
-> > 3. gradle Build 방법 전달
+> > 3. ~~gradle Build 방법 전달~~
 > > 4.  Box 아이템 지급 방법
 
 

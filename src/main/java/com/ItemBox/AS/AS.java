@@ -48,6 +48,7 @@ public class AS implements Listener {
         }
     }
 
+    
     @EventHandler
     public void onItemPlace(BlockPlaceEvent event) {
         Optional<ItemStack> maybeItem = Optional.ofNullable(event.getItemInHand());
