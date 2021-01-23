@@ -2,10 +2,9 @@ package com.ItemBox.AS;
 
 import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.EulerAngle;
 
-public class Animate extends BukkitRunnable 
+public class Animate implements Runnable
 {
 	ArmorStand s;
     int count;
