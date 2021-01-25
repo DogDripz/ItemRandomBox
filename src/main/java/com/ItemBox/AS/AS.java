@@ -82,7 +82,11 @@ public class AS implements Listener {
                 fm.addEffect(FireworkEffect.builder().flicker(false).trail(true).with(Type.CREEPER).withColor(Color.AQUA).withFade(Color.BLUE).build());
                 fm.setPower(3);
                 firework.setFireworkMeta(fm);
-                new MainMenu(player);
+                player.sendTitle("랜덤박스","획득",1,40, 1);
+                Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, ()->{
+                    new MainMenu(player);
+                },40);
+
                 //gui.openInventory(player);
             }
         }.runTaskLater(plugin, 100);
