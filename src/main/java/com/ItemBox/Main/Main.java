@@ -21,7 +21,7 @@ public class Main extends JavaPlugin
 		PluginDescriptionFile pdfFile = this.getDescription();
 		Bukkit.getConsoleSender().sendMessage(pdfFile.getName() + "버전" + pdfFile.getVersion() + "실행완료");
 		
-		getServer().getPluginManager().registerEvents(new ExampleGui(), this);
+		//getServer().getPluginManager().registerEvents(new ExampleGui(), this);
 		getServer().getPluginManager().registerEvents(new AS(this), this);
 		
 	}

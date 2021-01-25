@@ -1,5 +1,7 @@
 package com.ItemBox.AS;
 
+import com.ItemBox.GUI.MainMenu;
+import com.ItemBox.Utill.GUI;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -13,6 +15,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -78,9 +82,22 @@ public class AS implements Listener {
                 fm.addEffect(FireworkEffect.builder().flicker(false).trail(true).with(Type.CREEPER).withColor(Color.AQUA).withFade(Color.BLUE).build());
                 fm.setPower(3);
                 firework.setFireworkMeta(fm);
-                gui.openInventory(player);
+                new MainMenu(player);
+                //gui.openInventory(player);
             }
         }.runTaskLater(plugin, 100);
+    }
+
+    @EventHandler
+    public void guiClick(InventoryClickEvent e) {
+        GUI gui = GUI.getGUI((Player) e.getWhoClicked());
+        if(gui != null) gui.onClick(e);
+    }
+
+    @EventHandler
+    public void guiClose(InventoryCloseEvent e) {
+        GUI gui = GUI.getGUI((Player) e.getPlayer());
+        if(gui != null) gui.closeGUI(e);
     }
 }	   
 	
